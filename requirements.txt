@@ -1,0 +1,9 @@
+requests>=2.31.0
+aiohttp>=3.9.1
+certifi~=2023.7.22
+python-certifi-win32>=1.6.1
+google-cloud-aiplatform>=1.43.0
+google-api-core>=2.4.0
+google-api-python-client>=2.34.0
+cbcmgr>=2.2.14
+pillow~=10.2.0
