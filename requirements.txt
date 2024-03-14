@@ -7,3 +7,4 @@ google-api-core>=2.4.0
 google-api-python-client>=2.34.0
 cbcmgr>=2.2.14
 pillow~=10.2.0
+bumpversion>=0.6.0
