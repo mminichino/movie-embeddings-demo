@@ -19,12 +19,12 @@ def main():
     parser.add_argument('-c', '--collection', action='store', help="Collection", default="data")
     options = parser.parse_args()
 
-    auth = PasswordAuthenticator('Administrator', '0XYaIIt#exp6a2#%')
+    auth = PasswordAuthenticator(options.user, options.password)
     opts = ClusterOptions(auth, tls_verify=TLSVerifyMode.NO_VERIFY, network="external")
-    cluster = Cluster.connect('couchbase://52.15.92.200', opts)
-    bucket = cluster.bucket('movies')
-    scope = bucket.scope("data")
-    collection = scope.collection('data')
+    cluster = Cluster.connect(f"couchbase://{options.host}", opts)
+    bucket = cluster.bucket(options.bucket)
+    scope = bucket.scope(options.scope)
+    collection = scope.collection(options.collection)
 
     question = input("What movie would you like to watch? ")
 
