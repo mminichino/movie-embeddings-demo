@@ -8,3 +8,5 @@ google-api-python-client>=2.34.0
 cbcmgr>=2.2.15
 pillow~=10.2.0
 bumpversion>=0.6.0
+couchbase>=4.2.0
+python-daemon>=3.0.0
