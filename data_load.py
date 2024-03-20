@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+import sys
 import time
 from logformat import CustomLogFormatter
 from google_transform import GoogleEmbedding
@@ -54,6 +54,9 @@ progress_bar(0, data_length, prefix='Progress:', suffix='Complete', length=50)
 for n, movie in enumerate(data):
     poster_url = movie['poster_path']
 
+    if not movie['title'].isascii():
+        continue
+
     result = CheckImage().check_image_url(poster_url)
     if not result or result not in ("BMP", "GIF", "JPEG", "PNG"):
         logger.error(f"Skipping \"{movie['title']}\" due to failed image check: Image type: {result}")
@@ -64,7 +67,4 @@ for n, movie in enumerate(data):
     progress_bar(n + 1, data_length, prefix='Progress:', suffix='Complete', length=50)
 
 pool.join()
-
-# duration_string = time.strftime("%H hours %M minutes %S seconds.", time.gmtime(total_duration))
-# average_string = time.strftime("%H hours %M minutes %S seconds.", time.gmtime(average_duration))
-# logger.info(f"Embedding completed in {duration_string} [Average per embedding: {average_string}]")
+pool.vector_index(f"movie_vector", 1408, "image_embedding")
