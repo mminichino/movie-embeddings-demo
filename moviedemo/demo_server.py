@@ -12,6 +12,7 @@ from flask import send_file
 from flask import request
 from waitress import serve
 
+op: CBOperation
 app = Flask(__name__)
 
 
@@ -53,7 +54,8 @@ def parse_args():
     return args
 
 
-if __name__ == '__main__':
+def main():
+    global op
     options = parse_args()
     keyspace = f"{options.bucket}.{options.scope}.{options.collection}"
     op = CBOperation(options.host, options.user, options.password, ssl=True, quota=1024, create=True, replicas=0)
@@ -61,3 +63,7 @@ if __name__ == '__main__':
     logger = logging.getLogger('waitress')
     logger.setLevel(logging.INFO)
     serve(app, host='0.0.0.0', port=options.port)
+
+
+if __name__ == '__main__':
+    main()
