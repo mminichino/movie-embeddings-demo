@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+  <title>Movie Results</title>
+  <style>
+  html, body {
+    height: 100%;
+  }
+
+  html {
+    display: table;
+    margin: auto;
+  }
+
+  body {
+      display: table-cell;
+      vertical-align: middle;
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+  }
+
+  table, td, th {
+      border: 1px solid;
+      padding: 20px;
+      border-collapse: collapse;
+  }
+
+  table {
+      text-align: center;
+  }
+
+  button {
+    background-color: #0096FF;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 12px;
+  }
+
+  input {
+    width: 500px;
+    height: 40px;
+    font-size: 24px;
+  }
+  </style>
+</head>
+<body>
+  {% block body %}
+  {% endblock %}
+</body>
+</html>

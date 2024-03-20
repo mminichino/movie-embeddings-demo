@@ -14,12 +14,12 @@ warnings.filterwarnings("ignore")
 logger = logging.getLogger()
 logging.getLogger("googleapiclient").setLevel(logging.ERROR)
 
-file_handler = logging.FileHandler("run.log")
+file_handler = logging.FileHandler("../run.log")
 file_handler.setFormatter(CustomLogFormatter())
 logger.addHandler(file_handler)
 logger.setLevel(logging.INFO)
 
-data_file = "movie-data-2023.json"
+data_file = "../movie-data-2023.json"
 
 
 def progress_bar(iteration, total, prefix='', suffix='', decimals=1, length=100, fill='#', end="\r"):
