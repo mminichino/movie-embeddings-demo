@@ -2,7 +2,7 @@
 ##
 
 import logging
-import constants as C
+import moviedemo.constants as C
 
 
 class CustomDisplayFormatter(logging.Formatter):
