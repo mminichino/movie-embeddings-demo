@@ -29,7 +29,7 @@ setup(
         "google-cloud-aiplatform>=1.43.0",
         "google-api-core>=2.4.0",
         "google-api-python-client>=2.34.0",
-        "cbcmgr>=2.2.17",
+        "cbcmgr>=2.2.18",
         "pillow>=10.2.0",
         "bumpversion>=0.6.0",
         "couchbase>=4.2.0",
