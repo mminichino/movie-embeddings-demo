@@ -17,3 +17,7 @@ pip3 install git+https://github.com/mminichino/movie-embeddings-demo
 ```
 export PATH=$(python3 -m site --user-base)/bin:$PATH
 ```
+### 4. Create the collection and the Search index
+```
+data_load -u Administrator -p 'password' -h cb.host.example.com -f movie-data-2023.json
+```
