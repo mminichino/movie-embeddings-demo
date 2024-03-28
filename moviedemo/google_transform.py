@@ -5,7 +5,6 @@ from typing import Optional, Tuple, List
 from cbcmgr.cb_transform import Transform
 from moviedemo.restmgr import RESTManager
 import socket
-import googleapiclient.discovery
 import google.auth
 import vertexai
 from vertexai.vision_models import (
@@ -30,7 +29,6 @@ class GoogleEmbedding(Transform):
 
         self.credentials, self.gcp_project, self.gcp_account_email = self.default_auth()
 
-        self.gcp_client = googleapiclient.discovery.build('compute', 'v1', credentials=self.credentials)
         vertexai.init(project=self.gcp_project, location=self.gcp_region, credentials=self.credentials)
 
     @staticmethod

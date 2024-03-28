@@ -3,7 +3,6 @@
 
 from typing import Optional, Tuple, List
 import socket
-import googleapiclient.discovery
 import google.auth
 import vertexai
 from vertexai.vision_models import (
@@ -27,7 +26,6 @@ class GoogleEmbedding:
 
         self.credentials, self.gcp_project, self.gcp_account_email = self.default_auth()
 
-        self.gcp_client = googleapiclient.discovery.build('compute', 'v1', credentials=self.credentials)
         vertexai.init(project=self.gcp_project, location=self.gcp_region, credentials=self.credentials)
 
     @staticmethod
