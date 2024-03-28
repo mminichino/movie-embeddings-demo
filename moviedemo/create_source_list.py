@@ -4,8 +4,8 @@ import logging
 import json
 import warnings
 import time
-from restmgr import RESTManager
-from logformat import CustomDisplayFormatter
+from moviedemo.restmgr import RESTManager
+from moviedemo.logformat import CustomDisplayFormatter
 
 warnings.filterwarnings("ignore")
 logger = logging.getLogger()

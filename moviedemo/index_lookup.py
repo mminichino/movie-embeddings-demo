@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
-from google_embedding import GoogleEmbedding
+from moviedemo.google_embedding import GoogleEmbedding
 from cbcmgr.cb_operation_s import CBOperation
 
 

@@ -15,8 +15,8 @@ from typing import Union, List
 from requests.adapters import HTTPAdapter, Retry
 from requests.auth import AuthBase
 from aiohttp import ClientSession, TCPConnector
-from access_token import AccessToken
-from retry import retry
+from moviedemo.access_token import AccessToken
+from moviedemo.retry import retry
 if os.name == 'nt':
     import certifi_win32
     certifi_where = certifi_win32.wincerts.where()

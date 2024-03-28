@@ -1,7 +1,7 @@
 ##
 ##
 
-from restmgr import RESTManager
+from moviedemo.restmgr import RESTManager
 from PIL import Image
 from typing import Union
 import io

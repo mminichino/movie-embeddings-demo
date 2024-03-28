@@ -5,7 +5,7 @@
 import logging
 import argparse
 from cbcmgr.cb_operation_s import CBOperation
-from google_embedding import GoogleEmbedding
+from moviedemo.google_embedding import GoogleEmbedding
 from flask import Flask
 from flask import render_template
 from flask import send_file

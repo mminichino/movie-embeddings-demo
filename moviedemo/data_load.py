@@ -2,10 +2,10 @@
 
 import sys
 import time
-from logformat import CustomLogFormatter
-from google_transform import GoogleEmbedding
+from moviedemo.logformat import CustomLogFormatter
+from moviedemo.google_transform import GoogleEmbedding
 from cbcmgr.cb_transform import CBTransform
-from check_image import CheckImage
+from moviedemo.check_image import CheckImage
 import json
 import logging
 import warnings

@@ -3,7 +3,7 @@
 
 from typing import Optional, Tuple, List
 from cbcmgr.cb_transform import Transform
-from restmgr import RESTManager
+from moviedemo.restmgr import RESTManager
 import socket
 import googleapiclient.discovery
 import google.auth
