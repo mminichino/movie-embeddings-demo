@@ -46,6 +46,19 @@ class GoogleEmbedding(Transform):
             raise RuntimeError(f"error connecting to GCP: {err}")
 
     @staticmethod
+    def get_text_embeddings(contextual_text: str, dimension: int = 1408) -> List[float]:
+
+        model = MultiModalEmbeddingModel.from_pretrained("multimodalembedding")
+
+        embeddings = model.get_embeddings(
+            image=None,
+            contextual_text=contextual_text,
+            dimension=dimension,
+        )
+
+        return embeddings.text_embedding
+
+    @staticmethod
     def get_image_embeddings(image_bytes: bytes, contextual_text: Optional[str] = None, dimension: int = 1408) -> Tuple[Optional[List[float]], Optional[List[float]]]:
         model = MultiModalEmbeddingModel.from_pretrained("multimodalembedding")
         image = Image(image_bytes=image_bytes)
