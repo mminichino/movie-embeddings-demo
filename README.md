@@ -1,4 +1,4 @@
-# movie-embeddings-demo 1.0.2
+# movie-embeddings-demo 1.0.3
 
 ## Quickstart
 
@@ -7,7 +7,7 @@
 <br>
 The dataset was generated from data obtained from the TMDB as well as other public sources.
 ```
-curl -OLs https://github.com/mminichino/movie-embeddings-demo/releases/download/1.0.2/movie-data-2023.json
+curl -OLs https://github.com/mminichino/movie-embeddings-demo/releases/download/1.0.3/movie-data-2023.json
 ```
 ### 2. Install the demo package
 ```

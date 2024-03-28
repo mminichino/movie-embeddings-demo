@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore")
 logger = logging.getLogger()
 logging.getLogger("googleapiclient").setLevel(logging.ERROR)
 
-file_handler = logging.FileHandler("../run.log")
+file_handler = logging.FileHandler("run.log")
 file_handler.setFormatter(CustomLogFormatter())
 logger.addHandler(file_handler)
 logger.setLevel(logging.INFO)

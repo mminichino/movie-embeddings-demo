@@ -16,6 +16,8 @@ setup(
         'console_scripts': [
             'data_load = moviedemo.data_load:main',
             'demo_server = moviedemo.demo_server:main',
+            'index_lookup = moviedemo.index_lookup:main',
+            'generate_source_data = moviedemo.generate_source_data:main',
         ]
     },
     package_data={'moviedemo': ['templates/*', 'images/*']},
